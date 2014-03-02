@@ -172,10 +172,16 @@ em {
 
 body {
   height: 100%;
-  background: #202a39;
+  background: #77beed;
   background-size:100% 100%;
   background-repeat:no-repeat;
+  /*
   background-image: url(invitation.png);
+  */
+}
+
+.top-level {
+    padding-top: 80px;
 }
 
 .column-container {
@@ -205,6 +211,61 @@ body {
   display: inline-block;
 }
 
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.gold {
+    color: gold;
+}
+
+.blueviolet {
+    color: blueviolet;
+}
+
+.fuchsia {
+    color: fuchsia;
+}
+
+.brown {
+    color: brown;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.darkcyan {
+    color: darkcyan;
+}
+
+.tomato {
+    color: tomato;
+}
+
+.sandybrown {
+    color: sandybrown;
+}
+
+.large {
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
 .block {
   border-radius: 5px;
   margin-bottom: 150%;
