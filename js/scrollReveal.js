@@ -4,7 +4,7 @@
     ___  ___ _ __ ___ | | | |__) |_____   _____  __ _| |  _ ___
    / __|/ __| '__/ _ \| | |  _  // _ \ \ / / _ \/ _` | | | / __|
    \__ \ (__| | | (_) | | | | \ \  __/\ V /  __/ (_| | |_| \__ \
-   |___/\___|_|  \___/|_|_|_|  \_\___| \_/ \___|\__,_|_(_) |___/ v.0.0.4
+   |___/\___|_|  \___/|_|_|_|  \_\___| \_/ \___|\__,_|_(_) |___/ v.0.1.2
                                                         _/ |
                                                        |__/
 
@@ -19,7 +19,7 @@
 
 =============================================================================*/
 
-/*! scrollReveal.js v0.0.4 (c) 2014 Julian Lloyd | MIT license */
+/*! scrollReveal.js v0.1.2 (c) 2014 Julian Lloyd | MIT license */
 
 /*===========================================================================*/
 
@@ -32,6 +32,7 @@ window.scrollReveal = (function (window) {
 
       this.docElem = window.document.documentElement;
       this.options = this.extend(this.defaults, options);
+      this.styleBank = [];
 
       if (this.options.init == true) this.init();
   }
@@ -67,8 +68,14 @@ window.scrollReveal = (function (window) {
 
   //  Check DOM for the data-scrollReveal attribute
   //  and initialize all found elements.
-      this.elems = Array.prototype.slice.call(this.docElem.querySelectorAll('[data-scrollReveal]'));
+      this.elems = Array.prototype.slice.call(this.docElem.querySelectorAll('[data-scroll-reveal]'));
       this.elems.forEach(function (el, i) {
+
+    //  Capture original style attribute
+        if (!self.styleBank[el]) {
+          self.styleBank[el] = el.getAttribute('style');
+        }
+
         self.update(el);
       });
 
@@ -114,7 +121,7 @@ window.scrollReveal = (function (window) {
     parseLanguage: function (el) {
 
   //  Splits on a sequence of one or more commas or spaces.
-      var words = el.getAttribute('data-scrollreveal').split(/[, ]+/),
+      var words = el.getAttribute('data-scroll-reveal').split(/[, ]+/),
           parsed = {};
 
       function filter (words) {
@@ -196,14 +203,15 @@ window.scrollReveal = (function (window) {
     /*=============================================================================*/
 
     update: function (el) {
+
       var css   = this.genCSS(el);
-      var style = el.getAttribute('style');
+      var style = this.styleBank[el];
 
       if (style != null) style += ";"; else style = "";
 
-      if (!el.getAttribute('data-scrollReveal-initialized')) {
+      if (!el.getAttribute('data-scroll-reveal-initialized')) {
         el.setAttribute('style', style + css.initial);
-        el.setAttribute('data-scrollReveal-initialized', true);
+        el.setAttribute('data-scroll-reveal-initialized', true);
       }
 
       if (!this.isElementInViewport(el, this.options.viewportFactor)) {
@@ -213,7 +221,7 @@ window.scrollReveal = (function (window) {
         return;
       }
 
-      if (el.getAttribute('data-scrollReveal-complete')) return;
+      if (el.getAttribute('data-scroll-reveal-complete')) return;
 
       if (this.isElementInViewport(el, this.options.viewportFactor)) {
         el.setAttribute('style', style + css.target + css.transition);
@@ -226,7 +234,7 @@ window.scrollReveal = (function (window) {
             } else {
               el.removeAttribute('style');
             }
-            el.setAttribute('data-scrollReveal-complete',true);
+            el.setAttribute('data-scroll-reveal-complete',true);
           }, css.totalDuration);
         }
       return;
@@ -271,7 +279,7 @@ window.scrollReveal = (function (window) {
   //  ie. "move 25px from top" starts at 'top: -25px' in CSS.
 
       if (enter == "top" || enter == "left") {
-        if (!typeof parsed.move == "undefined") {
+        if (parsed.move) {
           parsed.move = "-" + parsed.move;
         }
         else {
@@ -284,14 +292,14 @@ window.scrollReveal = (function (window) {
           delay  = parsed.after   || this.options.after,
           easing = parsed.easing  || this.options.easing;
 
-      var transition = "-webkit-transition: all " + dur + " " + easing + " " + delay + ";" +
-                               "transition: all " + dur + " " + easing + " " + delay + ";" +
+      var transition = "-webkit-transition: -webkit-transform " + dur + " " + easing + " " + delay + ",  opacity " + dur + " " + easing + " " + delay + ";" +
+                               "transition: transform " + dur + " " + easing + " " + delay + ", opacity " + dur + " " + easing + " " + delay + ";" +
                       "-webkit-perspective: 1000;" +
               "-webkit-backface-visibility: hidden;";
 
   //  The same as transition, but removing the delay for elements fading out.
-      var reset = "-webkit-transition: all " + dur + " " + easing + " 0s;" +
-                          "transition: all " + dur + " " + easing + " 0s;" +
+      var reset = "-webkit-transition: -webkit-transform " + dur + " " + easing + " 0s,  opacity " + dur + " " + easing + " " + delay + ";" +
+                          "transition: transform " + dur + " " + easing + " 0s,  opacity " + dur + " " + easing + " " + delay + ";" +
                  "-webkit-perspective: 1000;" +
          "-webkit-backface-visibility: hidden;";
 
@@ -345,7 +353,9 @@ window.scrollReveal = (function (window) {
           elBottom = elTop + elH,
           h = h || 0;
 
-      return (elTop + elH * h) <= viewed && (elBottom) >= scrolled;
+      return (elTop + elH * h) <= viewed
+          && (elBottom) >= scrolled
+          || (el.currentStyle? el.currentStyle : window.getComputedStyle(el, null)).position == 'fixed';
     },
 
     extend: function (a, b){

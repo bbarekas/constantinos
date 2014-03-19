@@ -1,0 +1,12 @@
+
+#cloud1 {
+    width: 350px;
+    height: 170px;
+    padding-top: 75px;
+    margin: 50px auto 25px auto;
+    /*margin: 0 auto;
+    */
+    background: url("../img/cloud.png") no-repeat;
+    background-size: contain;
+
+}

@@ -13,6 +13,22 @@
     <!-- Initialize proper device scaling for media queries. (Yay responsive!) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/examples.css" type="text/css">
+
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+
+    <!--
+	<script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/_dependent/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/_examples/general.js"></script>
+	<script type="text/javascript" src="js/_examples/highlight.pack.js"></script>
+  	<script type="text/javascript" src="js/_examples/modernizr.custom.min.js"></script>
+  	<script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
+  	<script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
+    -->
 
     <link rel="stylesheet" href="style.css">
     <script>
@@ -39,43 +55,36 @@
 
   </div>
 <P-->
-    <div data-scrollReveal class="top-level">
+    <!--div data-scrollReveal class="top-level">
         <span class="bold large gold"> Βαπτήσια </span>
-    </div>
+    </div-->
 
-    <!-- Reveal using custom parameters. -->
-    <div data-scrollReveal="enter left and move 200px over 1.33s">
-        <span class="red"> Σάββατο </span>
-        <span class="yellow"> 26 </span>
-        <span class="blueviolet"> Απριλίου </span>
-        <span class="brown"> 2014</span>,
-        <span class="green"> 12:00 </span>
-    </div>
-    <div data-scrollReveal="enter right and move 100px after 1s">
-        <span class="sandybrown"> Εκλησάκι </span>
-        <span class="darkcyan"> Ζωοδόχου </span>
-        <span class="blue"> Πηγής</span>,
-        <span class="tomato"> Κάστρο Ρίο </span>
-    </div>
-    <div data-scrollReveal="wait 2.5s and then ease-in-out 100px">
-        <span class="cyan"> υπό κατασκευή </span> ...
-    </div>
+<div data-scroll-reveal="enter left move 400px over 5s" id="cloud1" >
+    <span class="bold large gold"> Βαπτήσια </span>
+</div>
 
-    <div data-scrollReveal="wait 3.5s and then ease-in-out 100px">
-        <div class="withLove">
-            <svg class="heart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="92.515px" height="73.161px" viewBox="0 0 92.515 73.161" xml:space="preserve">
-              <g>
-                <path fill="#010101" d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0
-                  c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z"/>
-              </g>
-            </svg>
-        </div>
-    </div>
+
 
 
 <script src='js/scrollReveal.js'></script>
 <script>
-    window.scrollReveal = new scrollReveal();
+
+    // The starting defaults.
+    var config = {
+        after: '0s',
+        enter: 'bottom',
+        move: '24px',
+        over: '0.66s',
+        easing: 'ease-in-out',
+        viewportFactor: 1, //0.33,
+        reset: false,
+        init: true
+    };
+
+    window.scrollReveal = new scrollReveal( config );
+
+    //window.scrollReveal = new scrollReveal();
+
 </script>
 
 </BODY>
