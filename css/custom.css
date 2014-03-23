@@ -1,7 +1,7 @@
 
 html {
 
-    height: 250%;
+    height: 200%;
 
     /*
     background-size:100% 100%;
@@ -30,28 +30,25 @@ html {
     position: relative;
     left: 10%;
     top: 2%;
-    width: 140px;
-    height: 140px;
+    width: 20%;
 }
 
 
 #cloud_01 {
     /*width: 50%;*/
     position: relative;
-    left: 40%;
-    top: 0%;
-    width: 574px;
-    height: 326px;
+    left: 30%;
+    top: -1%;
+    width: 65%;
 }
 
 
-#cloud_011 {
+#cloud_02 {
     /*width: 50%;*/
     position: relative;
-    left: 50%;
-    top: 5%;
-    width: 574px;
-    height: 326px;
+    left: 15%;
+    top: 2%;
+    width: 80%;
 }
 
 
@@ -66,7 +63,7 @@ div div {
 }
 
 
-#cloud_02 {
+#cloud_03 {
     /*width: 50%;*/
     /*top: 100px;*/
     height: 300px;
