@@ -22,7 +22,14 @@ html {
     background-position: center;
 }
 
-
+.fixed-box {
+    position: fixed;
+    width: 17%;/*just for preview*/
+    height: 100px;/*just for preview*/
+    background: red;/*just for preview*/
+    top:10px;
+    left: 80%;
+}
 
 
 #sunny {
