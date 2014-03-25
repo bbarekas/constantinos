@@ -11,7 +11,7 @@
 
 
     <!-- Initialize proper device scaling for media queries. (Yay responsive!) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
@@ -45,8 +45,39 @@
 <BODY>
 
 <script>
-    window.onorientationchange = function() { location.reload() };
+    window.onorientationchange = function() {
+        location.reload()
+    };
+    var html_page = document.getElementsByClassName('background');
+    var w = html_page.width;
+    var h = html_page.height;
+    console.log("W:"+w+"  H:"+h);
 </script>
+
+<div class="background">
+
+<div class="fixed-box">
+    <img width="100%" src="img/menu.png">
+    <div id="menu1" style="position: absolute; width: 100%; height: 15%; top:35%;">
+        <a href="index.html">
+            <img src="img/me.png" height="85%" style="margin: 0 auto"/>
+        </a>
+    </div>
+    <div id="menu1" style="position: absolute; width: 100%; height: 15%; top:55%;">
+        <a href="index.html">
+            <img src="img/church.png" width="80%"  style="margin: 0 auto"/>
+        </a>
+    </div>
+    <div id="menu1" style="position: absolute; width: 100%; height: 15%; top:75%;">
+        <a href="index.html">
+            <img src="img/restaurant.png" width="90%" style="margin: 0 auto"/>
+        </a>
+    </div>
+
+
+
+    <!--img height="30%" src="img/me.png"-->
+</div>
 
 <!--P>
   <div class="withLove">
@@ -65,25 +96,50 @@
     </div-->
 
 
-<div data-scroll-reveal0="wait 0.5s, enter top and then ease-in-out 140px over 2s" id="sunny" >
+<div data-scroll-reveal="wait 0.5s, enter top and then ease-in-out 140px over 1.22s" id="sunny" >
     <img width="100%" src="img/sunny.png">
 </div>
 
 
-<div data-scroll-reveal0="wait 1.5s, enter right, move 400px over 4s" id="cloud_01" >
+<!--div data-scroll-reveal0="wait 1.5s, enter right, move 400px over 4s" id="cloud_01" >
     <img width="100%"  src="img/cloud_01.png">
-</div>
+</div-->
 
-<div data-scroll-reveal0="wait 2s, enter left, move 450px over 5s" id="cloud_02" >
+<div data-scroll-reveal="wait 1.5s, enter right, move 450px over 1.5s" id="cloud_02" >
     <img width="100%" src="img/cloud_02.png">
 </div>
 
 
+<div data-scroll-reveal="wait 3s, enter right, move 450px over 1s" id="cloud_03" >
+    <img width="100%" src="img/cloud_03.png">
+</div>
+
+
+<div data-scroll-reveal="wait 3.2s, enter right, move 450px over 0.9s" id="cloud_04" >
+    <img width="100%" src="img/cloud_04.png">
+</div>
+
+<div style="max-height: 100px; height:10%; position: relative"></div>
+
+<div data-scroll-reveal="wait 3.5s, enter top, move 200px over 1.1s" id="cloud_05" >
+    <img width="100%" src="img/cloud_05.png">
+</div>
+
+<div style="max-height: 100px; height:10%; position: relative"></div>
+
+<div  id="bottom" >
+    <img width="100%" src="img/bottom2.png">
+</div>
+
+
+
+</div>
 
 <!--
 <div data-scroll-reveal="wait 2.5s and then ease-in-out 200px" id="cloud_02" >
 </div>
 -->
+</div>
 
 
 <script src='js/scrollReveal.js'></script>
@@ -96,7 +152,7 @@
         move: '24px',
         over: '1s',
         easing: 'ease-in-out',
-        viewportFactor: 0.9, //0.33,
+        viewportFactor: 1, //0.33,
         reset: true,
         init: true
     };
