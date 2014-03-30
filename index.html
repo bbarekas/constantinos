@@ -82,6 +82,7 @@
 </script>
 
 <script type="text/javascript">
+
     $(document).ready(function() {
         $(".various").fancybox({
             maxWidth	: 800,
@@ -96,9 +97,293 @@
             openEffect	: 'fade',
             closeEffect	: 'fade'
         });
+
+        $("#fancybox-manual-c").click(function() {
+            $.fancybox.open([
+                {
+                    href : 'gallery/IMG_1056.jpg',
+                    title : 'Στο μαιευτήριο'
+                }, {
+                    href : 'gallery/IMG_5991.jpg',
+                    title : 'Πρώτη μέρα στο σπίτι'
+                }, /*{
+                    href : 'gallery/IMG_6068.jpg',
+                    title : 'Στην αγκαλιά του μπαμπά'
+                },*/ {
+                    href : 'gallery/IMG_6272.jpg',
+                    title : 'Έντονο βλέμμα από μικρός'
+                }, {
+                    href : 'gallery/IMG_1131.jpg',
+                    title : 'Μην με ενοχλείτε'
+                }, {
+                    href : 'gallery/IMG_6371.jpg',
+                    title : 'Μετά το μπανάκι'
+                }, {
+                    href : 'gallery/IMG_6318.jpg',
+                    title : 'Με την γιαγιά Γεωργία'
+                }, {
+                    href : 'gallery/IMG_6475.jpg',
+                    title : 'Με την γιαγιά Όλγα'
+                }, {
+                    href : 'gallery/IMG_6448.jpg',
+                    title : 'Με την νονά Αγγελική'
+                }, {
+                    href : 'gallery/IMG_6530.jpg',
+                    title : 'Με την μαμά στην Παναγία της Βλαχέρνας'
+                }, {
+                    href : 'gallery/IMG_6569.jpg',
+                    title : 'Χορεύοντας με τον παππού Γιώργο'
+                }, {
+                    href : 'gallery/IMG_6744.jpg',
+                    title : 'Ασορτί'
+                }, {
+                    href : 'gallery/IMG_6757.jpg',
+                    title : 'Χαλαρώνοντας στην κούνια'
+                }, {
+                    href : 'gallery/IMG_6798.jpg',
+                    title : 'Στην αγκαλιά του παππού Κώστα'
+                }, {
+                    href : 'gallery/IMG_7270.jpg',
+                    title : 'Τα πρώτα γελάκια'
+                }, /*{
+                    href : 'gallery/IMG_7299.jpg',
+                    title : 'Παίζοντας με τον θείο Στάθη'
+                }, {
+                    href : 'gallery/IMG_7313.jpg',
+                    title : 'Με την θεία Μαρία και θείο Στάθη'
+                },*/ {
+                    href : 'gallery/IMG_7374.jpg',
+                    title : 'Στην αγκαλιά του μπαμπά'
+                }, {
+                    href : 'gallery/IMG_1247.jpg',
+                    title : 'Superman'
+                }, /*{
+                    href : 'gallery/IMG_1248.jpg',
+                    title : 'Superman II'
+                },*/ {
+                    href : 'gallery/IMG_1265.jpg',
+                    title : 'Τρομερό ανέκδοτο'
+                }, {
+                    href : 'gallery/IMG_7568.jpg',
+                    title : 'Δροσιστικό μπανάκι'
+                }, {
+                    href : 'gallery/IMG_7578.jpg',
+                    title : 'Μεσημεριανή σιέστα'
+                }, {
+                    href : 'gallery/IMG_7708.jpg',
+                    title : 'Παίζοντας στο γυμναστήριο'
+                }, /*{
+                    href : 'gallery/IMG_7732.jpg',
+                    title : 'Μπανάκι'
+                },*/ {
+                    href : 'gallery/IMG_7805.jpg',
+                    title : 'Με την μαμά στην Ροδινή'
+                }, {
+                    href : 'gallery/IMG_7853.jpg',
+                    title : 'Χαρούμενος στο γυμναστήριο'
+                }, {
+                    href : 'gallery/IMG_7877.jpg',
+                    title : 'Πρώτη βουτιά με τόν μπαμπά'
+                }, {
+                    href : 'gallery/IMG_7892.jpg',
+                    title : 'Με την γιαγιά Όλγα'
+                }, {
+                    href : 'gallery/IMG_1394.jpg',
+                    title : 'Σε καλοκαιρινές διακοπές λουκ'
+                }, {
+                    href : 'gallery/IMG_8339.jpg',
+                    title : 'Μετά το μπανάκι στην παραλία της Μεθώνης'
+                }, {
+                    href : 'gallery/IMG_8445.jpg',
+                    title : 'Σπιτική αιώρα/κούνια'
+                }, {
+                    href : 'gallery/IMG_8475.jpg',
+                    title : 'Μου αρέσουν τα τουρμπάνια'
+                }, {
+                    href : 'gallery/IMG_8520.jpg',
+                    title : 'Μετράμε τις μύτες μας'
+                }, {
+                    href : 'gallery/IMG_8599.jpg',
+                    title : 'Σοβαρά προβληματισμένος'
+                }, {
+                    href : 'gallery/IMG_8732.jpg',
+                    title : 'Με μπαμπά και μαμά στην μαρίνα'
+                }, {
+                    href : 'gallery/IMG_8744.jpg',
+                    title : 'Αγαπάω την μαμά μου'
+                }, {
+                    href : 'gallery/IMG_8918.jpg',
+                    title : 'Θέλω και εγώ μια τόσο μεγάλη μποτίλια γάλα'
+                }, {
+                    href : 'gallery/IMG_8976.jpg',
+                    title : 'Και άλλο τρομερό ανέκδοτο'
+                }, /*{
+                    href : 'gallery/IMG_8990.jpg',
+                    title : ''
+                },*/ {
+                    href : 'gallery/IMG_9095.jpg',
+                    title : 'θέλω να τα φτάσω εκεί πάνω'
+                }, {
+                    href : 'gallery/IMG_9128.jpg',
+                    title : 'Στην παλαιά περπατούρα της μαμάς'
+                }, {
+                    href : 'gallery/IMG_9217.jpg',
+                    title : 'Χχχμμμ, καινούργια παιχνίδια'
+                }, {
+                    href : 'gallery/IMG_9368.jpg',
+                    title : 'Με την μαμά μου στο κάστρο της Ναυπάκτου'
+                }, {
+                    href : 'gallery/IMG_9494.jpg',
+                    title : 'Με τον μπαμπά μου'
+                }, {
+                    href : 'gallery/IMG_9514.jpg',
+                    title : 'Πω Πω, τρομερό αυτό το βιντεάκι'
+                }, {
+                    href : 'gallery/IMG_0004_HD.jpg',
+                    title : 'Σαν τα γυαλιά της μαμάς δεν έχει'
+                }, /*{
+                    href : 'gallery/IMG_0032_HD.jpg',
+                    title : 'Έτσι και σε πιάσω'
+                },*/ {
+                    href : 'gallery/IMG_0095_HD.jpg',
+                    title : 'Ποζάροντας στον μπαμπά μου'
+                }, {
+                    href : 'gallery/IMG_0130_HD.jpg',
+                    title : 'Με τον παππού Γιώργο'
+                }, {
+                    href : 'gallery/IMG_0138_HD.jpg',
+                    title : 'Με τον μπαμπά μου'
+                }, {
+                    href : 'gallery/IMG_0149_HD.jpg',
+                    title : 'Κοιμάμαι με την μαμά μου'
+                }, {
+                    href : 'gallery/IMG_0154_HD.jpg',
+                    title : 'Εγώ και τα παιχνίδια μου'
+                }, {
+                    href : 'gallery/IMG_0204_HD.jpg',
+                    title : 'Παίζοντας με τον μπαμπά'
+                }, {
+                    href : 'gallery/IMG_0212_HD.jpg',
+                    title : 'Έχω κολλήσει στην πίστα 5'
+                }, {
+                    href : 'gallery/IMG_0456_HD.jpg',
+                    title : 'Απαγγέλω το ποίημα μου'
+                }, {
+                    href : 'gallery/IMG_0479_HD.jpg',
+                    title : 'Παζάροντας πρίν το φαγητό'
+                }, {
+                    href : 'gallery/IMG_0688_HD.jpg',
+                    title : 'Μετά το μπάνιο μου'
+                }, {
+                    href : 'gallery/IMG_0763_HD.jpg',
+                    title : 'Έτοιμος για βόλτα'
+                }, {
+                    href : 'gallery/IMG_1030_HD.jpg',
+                    title : 'Ο ύπνος θρέφει τα παιδιά ...'
+                }, {
+                    href : 'gallery/IMG_1056_HD.jpg',
+                    title : 'Δεν φτάνω να κάτσω στο σκαμνί του μπαμπά'
+                }, {
+                    href : 'gallery/IMG_1073_HD.jpg',
+                    title : 'Μαζί με την θεία Μαρία'
+                }, {
+                    href : 'gallery/IMG_1088_HD.jpg',
+                    title : 'Με τον θείο Στάθη'
+                }, {
+                    href : 'gallery/IMG_1107_HD.jpg',
+                    title : 'Μέσα στην τρελή χαρά'
+                }, /*{
+                    href : 'gallery/IMG_1298_HD.jpg',
+                    title : 'Ποζάροντας στο μπάνιο μου'
+                },*/ {
+                    href : 'gallery/IMG_1303_HD.jpg',
+                    title : 'Ασκήσεις στο μπάνιο μου'
+                }, {
+                    href : 'gallery/IMG_1491_HD.jpg',
+                    title : 'Μου πάνε τα ριγέ'
+                }, {
+                    href : 'gallery/IMG_1567_HD.jpg',
+                    title : 'Στο καρότσι με την μαμά μου'
+                }, {
+                    href : 'gallery/IMG_1770_HD.jpg',
+                    title : 'Έτοιμος για ταξίδι'
+                }, {
+                    href : 'gallery/IMG_1609_HD.jpg',
+                    title : 'Ταξιδεύοντας παρέα με το αστέρι-φύλακα '
+                }, {
+                    href : 'gallery/IMG_1943_HD.jpg',
+                    title : 'Τα Χριστούγεννα ντυμένος Αί Βασίλης τον παππού και την γιαγιά'
+                }, {
+                    href : 'gallery/IMG_1973_HD.jpg',
+                    title : 'Με τον μπαμπά και την μάμα'
+                }, {
+                    href : 'gallery/IMG_2242_HD.jpg',
+                    title : 'Αγουροξυπνημένος πρωτοχρονιάτικα με τον παππού και την γιαγιά'
+                }, {
+                    href : 'gallery/IMG_2287_HD.jpg',
+                    title : 'Παρέα με την μαμά'
+                }, {
+                    href : 'gallery/IMG_2692_HD.jpg',
+                    title : 'Με το καινούργιο μου κόκκινο ποδήλατο'
+                }, {
+                    href : 'gallery/IMG_2872_HD.jpg',
+                    title : 'Μου αρέσει το νέο μου λεοντάρι-μηχανάρα-περπατούρα'
+                }, {
+                    href : 'gallery/IMG_3651_HD.jpg',
+                    title : 'Με τον παππού και την γιαγιά'
+                }, {
+                    href : 'gallery/IMG_3701_HD_1.jpg',
+                    title : 'Μετά το μπάνιο μου'
+                }, {
+                    href : 'gallery/IMG_3893_HD.jpg',
+                    title : 'Ντυμένος κουνελάκι για τις Απόκριες'
+                }, {
+                    href : 'gallery/IMG_3982_HD.jpg',
+                    title : 'Το σγουρό μου το μαλλί έχει μακρύνει'
+                }, {
+                    href : 'gallery/IMG_4147_HD.jpg',
+                    title : 'Μάχη με τον μαύρο αρκούδο'
+                }, {
+                    href : 'gallery/IMG_9628.jpg',
+                    title : 'Στο ποδήλατο του μπαμπά μου'
+                }, {
+                    href : 'gallery/IMG_9646.jpg',
+                    title : 'Λατρεύω τις κούνιες'
+                }, {
+                    href : 'gallery/IMG_4444_HD.jpg',
+                    title : 'Βόλτα με την γιαγιά και το ποδήλατο μου'
+                }
+
+            ], {
+                padding: 0,
+
+                openEffect : 'fade',
+                openSpeed  : 250,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 250,
+
+                closeClick : false,
+                autoPlay: true,
+                playSpeed: 5000,
+
+
+                helpers : {
+                    /*thumbs : {
+                        width: 75,
+                        height: 50
+                    },*/
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        showEarly : false
+                    }
+                 }
+            });
+        });
+
     });
-
-
 
 </script>
 
@@ -137,7 +422,7 @@ http://www.jacklmoore.com/colorbox/
 <div data-scroll-reveal="wait 0.2s, ease-in-out 100px over 0.5s" class="fixed-box">
     <img width="100%" src="img/menu.png">
     <div style="position: absolute; width: 100%; height: 15%; top:35%;">
-        <a href="index.html">
+        <a id="fancybox-manual-c" href="javascript:;">
             <img src="img/me.png" width="35%" style="margin: 0 auto"/>
         </a>
     </div>
